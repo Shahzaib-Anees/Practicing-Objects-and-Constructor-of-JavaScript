@@ -1,12 +1,33 @@
-let userInputNum = +prompt("Enter a negative decimal number");
-let roundNum = Math.round(userInputNum);
-let floorNum = Math.floor(userInputNum);
-let ceilNum = Math.ceil(userInputNum);
+var userDetails = {
+    firstName: "Shahzaib",
+    lastName: "Anees",
+    email: "shahzaib123@gmail.com",
+    password: "shahzaib123",
+    age: 24,
+    city: "Karachi",
+    country: "Pakistan"
+}
 
-document.write(`<div class="card">
-<h4>Rounding off the UserInput Negative Decimal Number</h4>
-<span>Number : ${userInputNum}  </span>
-<span>  round off Value : ${roundNum} </span>
-<span>Floor Value : ${floorNum}</span>
-<span>Ceil Value : ${ceilNum}</span>
-</div>`);
+if ("age" in userDetails && "country" in userDetails) {
+    document.write(`<div class="card">
+       <h4>Checking if Age and Country exists in userDetails Object or not</h4>
+        <span>The Property Age and Country are Present in UserDetails</span>     
+    </div>`);
+}else{
+    document.write(`<div class="card">
+       <h4>Checking if Age and Country exists in userDetails Object or not</h4>
+        <span>The Property Age and Country are not Present in UserDetails</span>     
+    </div>`);
+}
+
+if(userDetails.hasOwnProperty("firstName") && userDetails.hasOwnProperty("lastName")){
+    document.write(`<div class="card">
+       <h4>Checking if FirstName and LastName exists in userDetails Object or not</h4>
+        <span>The Property FirstName and LastName are Present in UserDetails</span>     
+    </div>`);
+}else{
+    document.write(`<div class="card">
+       <h4>Checking if FirstName and LastName exists in userDetails Object or not</h4>
+        <span>The Property FirstName and LastName are not Present in UserDetails</span>     
+    </div>`);
+}
