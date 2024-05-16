@@ -4,16 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maths Methods in JavaScript | Question 04</title>
+    <title> Objects and Constructor in JavaScript | Question 04</title>
     <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="./q04.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Practicing Maths Methods of JavaScript</h1>
-        <p>I am practicing and understanding some built-in Maths Methods of JavaScript </p>
+        <h1>Practicing Objects and Constructor of JavaScript</h1>
+        <p>I am practicing and understanding Objects and Constructor of JavaScript </p>
     </div>
-    
+
+    <!-- User Info Form  -->
+    <article id="form-container">
+        <h4 id="form-heading">User Information Form</h4>
+        <div id="form-content">
+            <div class="input-container">
+                <h5>Name :</h5>
+                <input type="text" name="Name" placeholder="Enter your FullName here" id="name-input"
+                    class="inputField" required>
+            </div>
+
+            <div class="input-container">
+                <h5>Address :</h5>
+                <input type="text" name="Address" placeholder="Enter your Home Address here" id="address-input"
+                    class="inputField" required>
+            </div>
+            <div class="input-container">
+                <h5>Profession :</h5>
+                <input type="text" name="Profession" placeholder="Enter your Profession here" id="profession-input"
+                    class="inputField" required>
+            </div>
+            <div class="input-container">
+                <h5>Selct your Gender :</h5>
+                <input type="radio" name="gender" value="Male" class="genderInputField" onclick="catchGender(this)">Male
+                <input type="radio" name="gender" value="Female" class="genderInputField"
+                    onclick="catchGender(this)">Female
+            </div>
+            <div class="input-container">
+                <h5>Tell your Education :</h5>
+                <input type="radio" name="education" value="Matriculation" class="educationInputField"
+                    onclick="catchEducation(this)">Matriculation
+                <input type="radio" name="education" value="Intermediate" class="educationInputField"
+                    onclick="catchEducation(this)">Intermediate
+                <input type="radio" name="education" value="Graduation" class="educationInputField"
+                    onclick="catchEducation(this)">Graduation
+            </div>
+
+            <button id="submit-btn" onclick="submitValues()">Submit</button>
+
+        </div>
+        <div id="info-container">
+            
+        </div>
+    </article>
+
 </body>
 <script src="./q04.js"></script>
 
